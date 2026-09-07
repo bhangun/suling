@@ -1,0 +1,30 @@
+--patch-module
+suling='/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/Projects/Gollek-Ext/suling/src/main/java:/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/Projects/Gollek-Ext/suling/target/generated-sources/annotations'
+-encoding
+'UTF-8'
+-protected
+-quiet
+--release
+25
+-author
+-bottom
+'Copyright &#169; 2024&#x2013;2026. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/Projects/Gollek-Ext/suling/target/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:all,-missing
+-doctitle
+'Suling 0.1.0 API'
+-tag
+"apiNote:a:API Note:"
+-tag
+"implSpec:a:Implementation Requirements:"
+-tag
+"implNote:a:Implementation Note:"
+-use
+-version
+-windowtitle
+'Suling 0.1.0 API'

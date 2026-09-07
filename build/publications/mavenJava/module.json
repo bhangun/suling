@@ -1,0 +1,60 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "tech.kayys",
+    "module": "suling",
+    "version": "0.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "suling-0.1.0.jar",
+          "url": "suling-0.1.0.jar",
+          "size": 132470,
+          "sha512": "3398bc4315eea7928b5b7212bec9d26b1cc22546f7661e515370af881c508fa91d703c6d99132c8154478fd943b497dd7584b5ee766bc02d28e4ecea6f37db43",
+          "sha256": "2c8f7904b4db075bb1b0b4fce1d981f4fed1810eccb9321c16a30d235e7773ae",
+          "sha1": "d0b92848fef578e441f78f00647833846c068b63",
+          "md5": "940cfc46494222f67440121dc4ac003c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "suling-0.1.0.jar",
+          "url": "suling-0.1.0.jar",
+          "size": 132470,
+          "sha512": "3398bc4315eea7928b5b7212bec9d26b1cc22546f7661e515370af881c508fa91d703c6d99132c8154478fd943b497dd7584b5ee766bc02d28e4ecea6f37db43",
+          "sha256": "2c8f7904b4db075bb1b0b4fce1d981f4fed1810eccb9321c16a30d235e7773ae",
+          "sha1": "d0b92848fef578e441f78f00647833846c068b63",
+          "md5": "940cfc46494222f67440121dc4ac003c"
+        }
+      ]
+    }
+  ]
+}

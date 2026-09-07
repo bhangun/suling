@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javadocOptions>
+  <tags>
+    <tag>
+      <name>apiNote</name>
+      <head>API Note:</head>
+      <placement>a</placement>
+    </tag>
+    <tag>
+      <name>implSpec</name>
+      <head>Implementation Requirements:</head>
+      <placement>a</placement>
+    </tag>
+    <tag>
+      <name>implNote</name>
+      <head>Implementation Note:</head>
+      <placement>a</placement>
+    </tag>
+  </tags>
+  <docletArtifacts>
+    <docletArtifact />
+  </docletArtifacts>
+  <tagletArtifacts>
+    <tagletArtifact />
+  </tagletArtifacts>
+  <javadocResourcesDirectory>src/main/javadoc</javadocResourcesDirectory>
+</javadocOptions>

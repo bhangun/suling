@@ -1,0 +1,11 @@
+tech/kayys/suling/FlacAudioFormatTest.class
+tech/kayys/suling/metadata/FlacMetadataTest.class
+tech/kayys/suling/FlacLibraryCheckTest.class
+tech/kayys/suling/FlacFormatConstantsTest.class
+tech/kayys/suling/FlacExceptionTest.class
+tech/kayys/suling/ffmpeg/FfmpegLibraryCheckTest.class
+tech/kayys/suling/IntegrationTestBase.class
+tech/kayys/suling/decoder/FlacStreamDecoderTest.class
+tech/kayys/suling/RoundTripTest.class
+tech/kayys/suling/encoder/FlacStreamEncoderTest.class
+tech/kayys/suling/audio/SulingAudioTest.class

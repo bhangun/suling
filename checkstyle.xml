@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<!--
+  Checkstyle configuration for flac-ffm.
+  Enforces a conservative subset of Sun/Google style that is compatible
+  with the FFM-heavy patterns in this codebase.
+
+  Run: mvn checkstyle:check  (add maven-checkstyle-plugin to pom.xml first)
+-->
+<module name="Checker">
+    <property name="severity" value="warning"/>
+    <property name="fileExtensions" value="java"/>
+
+    <!-- ===== File-level ===== -->
+    <module name="NewlineAtEndOfFile"/>
+    <module name="FileTabCharacter">
+        <property name="eachLine" value="true"/>
+    </module>
+
+    <!-- ===== Tree Walker (per-file AST checks) ===== -->
+    <module name="TreeWalker">
+
+        <!-- Javadoc -->
+        <module name="MissingJavadocMethod">
+            <property name="scope" value="public"/>
+            <property name="allowMissingPropertyJavadoc" value="true"/>
+            <!-- Allow missing Javadoc on trivial getters/setters -->
+            <property name="ignoreMethodNamesRegex" value="^(get|set|is)[A-Z].*"/>
+        </module>
+        <module name="MissingJavadocType">
+            <property name="scope" value="public"/>
+        </module>
+        <module name="JavadocStyle">
+            <property name="checkEmptyJavadoc" value="true"/>
+        </module>
+
+        <!-- Imports -->
+        <module name="AvoidStarImport">
+            <!-- java.lang.foreign.* is intentionally imported wholesale in FFM code
+                 because virtually every class in the package is used.
+                 static imports of ValueLayout.* are similarly permitted. -->
+            <property name="excludes" value="java.lang.foreign,java.lang.foreign.ValueLayout"/>
+            <property name="allowStaticMemberImports" value="true"/>
+        </module>
+        <module name="UnusedImports"/>
+        <module name="IllegalImport">
+            <!-- Forbid use of sun.* internal APIs -->
+            <property name="illegalPkgs" value="sun"/>
+        </module>
+
+        <!-- Naming conventions -->
+        <module name="ConstantName"/>
+        <module name="LocalVariableName"/>
+        <module name="MemberName"/>
+        <module name="MethodName"/>
+        <module name="PackageName"/>
+        <module name="ParameterName"/>
+        <module name="StaticVariableName"/>
+        <module name="TypeName"/>
+
+        <!-- Code quality -->
+        <module name="EmptyBlock">
+            <property name="option" value="text"/>
+        </module>
+        <module name="NeedBraces">
+            <!-- Allow single-line if/else in terse FFM callback adapters -->
+            <property name="allowSingleLineStatement" value="true"/>
+        </module>
+        <module name="EqualsHashCode"/>
+        <module name="SimplifyBooleanExpression"/>
+        <module name="SimplifyBooleanReturn"/>
+        <module name="StringLiteralEquality"/>
+        <module name="NoFinalizer"/>
+        <module name="OneStatementPerLine">
+            <!-- Allow multiple statements per line in fluent setter chains -->
+            <property name="treatTryResourcesAsStatement" value="true"/>
+        </module>
+
+        <!-- Whitespace -->
+        <module name="GenericWhitespace"/>
+        <module name="MethodParamPad"/>
+        <module name="NoWhitespaceAfter"/>
+        <module name="NoWhitespaceBefore"/>
+        <module name="OperatorWrap"/>
+        <module name="ParenPad"/>
+        <module name="TypecastParenPad"/>
+        <module name="WhitespaceAfter"/>
+        <module name="WhitespaceAround">
+            <!-- Allow empty constructors/methods/etc -->
+            <property name="allowEmptyConstructors" value="true"/>
+            <property name="allowEmptyMethods" value="true"/>
+            <property name="allowEmptyTypes" value="true"/>
+            <property name="allowEmptyLoops" value="true"/>
+        </module>
+
+        <!-- Modifiers -->
+        <module name="ModifierOrder"/>
+        <module name="RedundantModifier"/>
+
+        <!-- Blocks -->
+        <module name="LeftCurly"/>
+        <module name="RightCurly"/>
+
+        <!-- Miscellaneous -->
+        <module name="ArrayTypeStyle"/>
+        <module name="UpperEll"/>
+
+        <!-- Size limits (generous for FFM code) -->
+        <module name="MethodLength">
+            <property name="max" value="200"/>
+        </module>
+        <module name="ParameterNumber">
+            <property name="max" value="12"/>
+        </module>
+        <module name="LineLength">
+            <property name="max" value="130"/>
+            <!-- Don't check Javadoc lines or method handle declarations -->
+            <property name="ignorePattern" value="^(\s*\*.*|.*MH_.*|.*FunctionDescriptor.*)$"/>
+        </module>
+
+    </module>
+</module>
