@@ -6,7 +6,7 @@
 
     <groupId>tech.kayys</groupId>
     <artifactId>suling</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <packaging>jar</packaging>
 
     <name>Suling</name>
@@ -31,10 +31,23 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/xiph/flac.git</connection>
-        <developerConnection>scm:git:https://github.com/xiph/flac.git</developerConnection>
-        <url>https://github.com/xiph/flac</url>
+        <connection>scm:git:https://github.com/bhangun/suling.git</connection>
+        <developerConnection>scm:git:https://github.com/bhangun/suling.git</developerConnection>
+        <url>https://github.com/bhangun/suling</url>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/bhangun/suling</url>
+        </repository>
+        <snapshotRepository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/bhangun/suling</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <properties>
         <maven.compiler.release>25</maven.compiler.release>
@@ -125,10 +138,6 @@
                             <Enable-Native-Access>ALL-UNNAMED</Enable-Native-Access>
                         </manifestEntries>
                     </archive>
-                    <!-- Exclude module-info for non-modular usage -->
-                    <excludes>
-                        <exclude>module-info.class</exclude>
-                    </excludes>
                 </configuration>
             </plugin>
 
