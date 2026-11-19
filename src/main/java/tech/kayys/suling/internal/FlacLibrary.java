@@ -58,8 +58,10 @@ public final class FlacLibrary {
 
         if (lookup == null) {
             String[] candidates = {
+                    "libFLAC.so.14",
                     "libFLAC.so.12",
                     "libFLAC.so.8",
+                    "libFLAC.so",
                     "libFLAC.dylib",
                     "libFLAC.14.dylib",
                     "libFLAC",
@@ -67,7 +69,9 @@ public final class FlacLibrary {
                     "/opt/homebrew/lib/libFLAC.dylib",
                     "/opt/homebrew/lib/libFLAC.14.dylib",
                     "/usr/local/lib/libFLAC.dylib",
-                    "/usr/local/lib/libFLAC.14.dylib"
+                    "/usr/local/lib/libFLAC.14.dylib",
+                    "/usr/lib/x86_64-linux-gnu/libFLAC.so",
+                    "/usr/lib/aarch64-linux-gnu/libFLAC.so"
             };
             for (String name : candidates) {
                 Optional<SymbolLookup> opt = tryLoad(name);

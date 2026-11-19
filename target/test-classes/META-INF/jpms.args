@@ -1,4 +1,0 @@
---patch-module
-tech.kayys.suling=_
---add-reads
-tech.kayys.suling=ALL-UNNAMED
